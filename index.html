@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Canvas Caffe | Menu</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f8f4ee;
+      color: #30251f;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    header {
+      background: #30251f;
+      color: white;
+      padding: 25px 15px;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+    header p {
+      margin: 0;
+      color: #e7c5ad;
+    }
+    main {
+      max-width: 800px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+    .menu {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px #00000018;
+    }
+    .note {
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+    footer {
+      padding: 20px;
+      color: #74665d;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Canvas Caffe</h1>
+    <p>Good food. Great coffee. Beautiful moments.</p>
+  </header>
+
+  <main>
+    <div id="menu-container">
+      <div class="note">
+        <h2>Our Menu</h2>
+        <p>Your menu image will appear here once you upload it.</p>
+        <p>Please upload your menu image to this repository
+        with the filename <b>menu.jpg</b>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Thank you for visiting The Canvas Caffe ❤️
+  </footer>
+
+  <script>
+    const container = document.getElementById("menu-container");
+    const menu = new Image();
+    menu.className = "menu";
+    menu.alt = "The Canvas Caffe menu";
+    menu.src = "menu.jpg";
+
+    menu.onload = () => {
+      container.replaceChildren(menu);
+    };
+  </script>
+</body>
+</html>
