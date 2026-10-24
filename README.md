@@ -1,1 +1,1 @@
-# canvas-caffe-menu.
+# canvas-caffe-menu
